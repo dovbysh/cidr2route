@@ -24,7 +24,15 @@ var (
 var rootCmd = &cobra.Command{
 	Use:   "cidr2route",
 	Short: "Convert CIDR to openvpn route",
-	Long:  ``,
+	Long: `
+Thanks to:
+
+https://reestr.rublacklist.net/ru/disseminators/
+https://reestr.rublacklist.net/ru/article/api/ 
+
+https://github.com/touhidurrr/iplist-youtube
+https://github.com/nickspaargaren/no-google
+`,
 	Run: func(cmd *cobra.Command, args []string) {
 		readFile, err := os.Open(cidr4File)
 		if err != nil {
